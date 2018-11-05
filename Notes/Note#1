@@ -1,0 +1,36 @@
+DATE: 20Aug2018-24Aug2018
+
+
+Till now, i was searching and working on trying to improve the current scheduling algorithm (CFS, completely fair scheduler) for modern linux. 
+I came across nice values and commands to change them (they directly affect the priority of a process, NOTE: Higher priority DOES NOT NECESSARILY mean lower TURN AROUND TIME/WAITING TIME) 
+--Important links:-
+
+--Linux :-
+-Completely Fair Schhheduler (CFS): https://www.linuxjournal.com/node/10267
+-nice values: https://www.nixtutor.com/linux/changing-priority-on-linux-processes/
+-nice values x2: https://askubuntu.com/questions/656771/process-niceness-vs-priority
+-nice value changing commands: https://www.howtoforge.com/linux-nice-command/
+-Piping (easy/basics of it): https://www.careerride.com/Linux-pipes.aspx
+-grep: https://www.computerhope.com/unix/ugrep.htm
+
+--Program features:-
+- Basic Service Set (BSS): https://en.wikipedia.org/wiki/.bss "executable containing statically-allocated variables that are not explicitly initialized to any value"
+- https://en.wikipedia.org/wiki/Data_segment -> to better understand the output of "size" linux command
+-better understand ELF files https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/#the-anatomy-of-an-elf-file
+
+--Important commands:-
+- size: Get bss, text, data, dec of  /usr/lib/firefox/firefox or a.out of our output object
+example: size a.out
+- readelf : get various information like  file headers, various section headers, .rodata etc for an ELF file (refer important links above to read about ELF files)
+example: readelf -a a.out   (-a is to display all information, look into its manpages by typing man readelf in the command line, if you don't have the readelf command for your linux, (highly unlikely since it comes with every linux distro, even came with my arch, just do sudo pacman -S readelf on arch, yum install readelf on centOS and apt-get install readelf on ubuntu k?)
+- grep: a basic unix command you should be familiar with, look into its manpages by typing "man grep" in the terminal. You want to learn about more such basic commands like cat, less etc... also, do a basic reading on the piping in linux, if we have to do shell scripting in future it will come in handy. I have attached a link above, you may want to read it for more such commands and pipelining in linux. 
+
+
+
+Now, i am shifting my focus away from linux and CFS and trying to apply ML in the round robin/just the scheduling algorithm. Lots of work needs to be done, for the sake of it, we strive forward with a realistic goal: Formulate the problem statement.
+
+Here's the great wave off Kanagawa to mark my resolve:
+https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa#/media/File:Tsunami_by_hokusai_19th_century.jpg
+
+
+https://hastebin.com/owahazijug.http

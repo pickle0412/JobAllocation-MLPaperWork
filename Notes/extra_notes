@@ -1,0 +1,6 @@
+>Generally, size of a file in linux is displayed with " ls -alsh" (human readable format) command but the size of directory can't be displayed using this that is becuase it is the size of the space on disk required to store the metadata of the directory, by default in modern unix like OS this size is reserved as 4096 bytes hence a directory can never be of a size less than this, the size of directory increases as it gets filled.
+To see the size of directory, use  du <directory name>
+
+> https://en.wikipedia.org/wiki/Data_segment -> to better understand the output of "size" linux command
+
+>better understand ELF files https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/#the-anatomy-of-an-elf-file
